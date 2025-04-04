@@ -32,23 +32,26 @@ public class SecurityConfig {
              .build();
     }
 
-    @Bean
-    // using InMemoryUserDetailsManager
-    public UserDetailsService userDetailsService(){
-        UserDetails user1 = User.withUsername("user1")
-                .password("{noop}pass1")
-                .roles("USER")
-                .build();
+//
+//    @Bean
+//    // using InMemoryUserDetailsManager
+//    public UserDetailsService userDetailsService(){
+//        UserDetails user1 = User.withUsername("user1")
+//                .password("{noop}pass1")
+//                .roles("USER")
+//                .build();
+//
+//        UserDetails admin= User.withUsername("admin")
+//                .password( "{noop}admin")
+//                .roles("ADMIN")
+//                .build();
+//
+//
+//        return new InMemoryUserDetailsManager(user1,admin);
+//    }
+    //Role based Authentication using database
 
-        UserDetails admin= User.withUsername("admin")
-                .password( "{noop}admin")
-                .roles("ADMIN")
-                .build();
 
 
-        return new InMemoryUserDetailsManager(user1,admin);
-    }
 
-
-    //Role based Authentication
 }
